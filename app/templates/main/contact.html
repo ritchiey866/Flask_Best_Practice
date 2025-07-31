@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Flask Blog{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-4">
+                        <i class="fas fa-envelope me-2"></i>Contact Us
+                    </h1>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h3>Get in Touch</h3>
+                            <p>
+                                Have questions, suggestions, or feedback? We'd love to hear from you! 
+                                Fill out the form and we'll get back to you as soon as possible.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Contact Information</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-envelope me-2"></i>info@flaskblog.com</li>
+                                <li><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</li>
+                                <li><i class="fas fa-map-marker-alt me-2"></i>123 Flask Street, Python City</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select class="form-select" id="subject" required>
+                                <option value="">Choose a subject...</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required placeholder="Please describe your inquiry..."></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Subscribe to our newsletter for updates
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-clock fa-2x text-primary mb-2"></i>
+                            <h5>Response Time</h5>
+                            <p class="text-muted">Within 24 hours</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <h5>Secure</h5>
+                            <p class="text-muted">Your data is protected</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-headset fa-2x text-info mb-2"></i>
+                            <h5>Support</h5>
+                            <p class="text-muted">24/7 assistance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}About - Flask Blog{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-4">
+                        <i class="fas fa-info-circle me-2"></i>About Flask Blog
+                    </h1>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h3>Our Mission</h3>
+                            <p>
+                                Flask Blog is a modern web application designed to demonstrate best practices 
+                                in Flask development. We believe in creating clean, maintainable, and scalable 
+                                code that follows Content Engineering methodology.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Our Vision</h3>
+                            <p>
+                                To provide a comprehensive example of how to build robust web applications 
+                                using Flask with proper architecture, security, and user experience in mind.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <h3>Features</h3>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Blueprint Architecture</li>
+                                <li><i class="fas fa-check text-success me-2"></i>User Authentication</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Blog Post Management</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Category Organization</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>RESTful API</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Admin Dashboard</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Search Functionality</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Responsive Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Technology Stack</h3>
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="fab fa-python fa-3x text-primary mb-2"></i>
+                                <h5>Python</h5>
+                                <p class="text-muted">Core programming language</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="fas fa-flask fa-3x text-success mb-2"></i>
+                                <h5>Flask</h5>
+                                <p class="text-muted">Web framework</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="fas fa-database fa-3x text-warning mb-2"></i>
+                                <h5>SQLAlchemy</h5>
+                                <p class="text-muted">ORM and database</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Content Engineering</h3>
+                    <p>
+                        This project follows Content Engineering methodology, which emphasizes:
+                    </p>
+                    <ul>
+                        <li><strong>Content Modeling:</strong> Structured data models with clear relationships</li>
+                        <li><strong>Content Architecture:</strong> Modular blueprint structure for scalability</li>
+                        <li><strong>Content Workflow:</strong> Systematic development and deployment process</li>
+                        <li><strong>Content Governance:</strong> Standards and quality assurance</li>
+                    </ul>
+                    
+                    <div class="text-center mt-5">
+                        <a href="{{ url_for('main.posts') }}" class="btn btn-primary me-3">
+                            <i class="fas fa-newspaper me-2"></i>Browse Posts
+                        </a>
+                        {% if not current_user.is_authenticated %}
+                        <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-user-plus me-2"></i>Join Us
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
